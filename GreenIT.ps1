@@ -21,9 +21,7 @@ function Write-Log
     $Time = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
 
     # Skriver tidstämpel + meddelande till loggfilen
-    Add-Content
-        -Path $LogFile
-        -Value "$Time - $Message"
+    Add-Content -Path $LogFile -Value "$Time - $Message"
 }
 
 # Skriver att programmet startat
@@ -47,14 +45,10 @@ foreach ($Computer in $Computers)
         try
         {
             # Hämtar operativsystemsinformation via CIM/WMI
-            $OS = Get-CimInstance
-                Win32_OperatingSystem
-                -ComputerName $Computer
+            $OS = Get-CimInstance Win32_OperatingSystem -ComputerName $Computer
 
             # Hämtar generell datorinformation via CIM/WMI
-            $ComputerInfo = Get-CimInstance
-                Win32_ComputerSystem
-                -ComputerName $Computer
+            $ComputerInfo = Get-CimInstance Win32_ComputerSystem -ComputerName $Computer
 
             # Skapar ett objekt med information om datorn
             $Object = [PSCustomObject]@{
@@ -95,7 +89,32 @@ foreach ($Computer in $Computers)
 }
 
 # Exporterar inventeringsresultatet till CSV-fil
-$Results | Export-Csv
-    ".\InventoryReport.csv"
-    -NoTypeInformation
-... (28 lines left)
+$Results | Export-Csv -Path ".\InventoryReport.csv" -NoTypeInformation
+
+# Loggar att rapporten skapats
+Write-Log "Rapport skapad"
+
+
+Write-Host ""
+
+# Visar meddelande till användaren
+Write-Host "Klar!"
+
+Write-Host ""
+
+# Visar resultatet i tabellform i terminalen
+$Results | Format-Table
+
+# Loggar att programmet avslutats
+Write-Log "========== END =========="
+
+
+foreach ($Result in $Results)
+{
+    if ($Result.Status -eq "Online")
+    {
+        Stop-Computer `
+            -ComputerName $Result.Computer `
+            -Force
+    }
+}

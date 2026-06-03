@@ -18,7 +18,7 @@ try
     # Startar PowerShell och kör GreenIT-scriptet
     $Action = New-ScheduledTaskAction `
         -Execute "powershell.exe" `
-        -Argument "-ExecutionPolicy Bypass -File C:\VS\GreenIT.ps1"
+        -Argument "-ExecutionPolicy Bypass -File C:\Script\GreenIT.ps1"
 
     Write-Log "ScheduledTaskAction skapad"
 
