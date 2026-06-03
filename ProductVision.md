@@ -19,3 +19,12 @@ Vi ska skapa ett PowerShell script för att spara energi och inventera vårt nä
 Projektet genomförs med korta 1 dags sprintar enligt en anpassad Scrum. Varje sprint innehåller planering, genomförande och review.
 Arbetet hanteras i GitHub Projects där varje uppgift ska kopplas till en user story eller issue. Kort flyttas mellan To Do, In Progress och Done under arbetets gång.
 
+
+## Roller
+
+Projectowner: Lucas Wenehult
+Scrum Master: Andreas dahlstöm
+Utvecklare:
+Micael Engdah
+Moamin Al-Khazraji
+Johanna Swann
