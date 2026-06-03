@@ -18,3 +18,7 @@ Slut målet för dagen är att all kod som ligger på våra datorer ska ligga p�
 Imorgon kommer vi försöka ha en komplett kod som kan testas på ett virtuellt nätverk.
 
 Sprint 2 var lyckad och vi fick någa punkter avklarade på backloggen. vi kommer forsätta jobba under morgondagen med att ha en komplet kod som vi ska kunna redovis för vår kunder. 
+
+# Sprint review 3/6-26
+## sprint 3
+
