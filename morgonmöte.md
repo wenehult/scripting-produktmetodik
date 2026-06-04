@@ -10,3 +10,13 @@ Vi ska även ha ett återkopplings möte under dagen för att se hur det har gå
 Alla deltog i dagen möte och vi diskuterade vad vi gjort och vad vi skulle göra under dagen. 
 
 Vi har en bättre backlogg som gjorde att vi kunde börja dela upp upgifter och jobba mer efter scrum modelen. 
+
+
+
+## Morgonmöte 3/6-26
+Uteblivet
+
+## Morgonmöte 4/6-26
+
+vi var tre på morgonmötet idag och diskuterade det sista vi ska göra inför redovisningen. 
+Fokuset under dagen var att plugga på koden så att alla kan den samt beta av de sista userstorysen så att vi har en tom backlogg. 
