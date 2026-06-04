@@ -96,16 +96,19 @@ foreach ($Line in $Computers)
     {
         $IP = ""  #Lämnar IP-adressen tom om den saknas
     }
-
+   
+    # Visar vilken dator som kontrolleras
     Write-Host "Kontrollerar $Computer..." -ForegroundColor Yellow
 
+    # Kontrollerar om datorn är online
     if (Test-Connection $Computer -Count 1 -Quiet -ErrorAction SilentlyContinue)
     {
         try
         {
-            $OS = Get-CimInstance Win32_OperatingSystem -ComputerName $Computer
-            $ComputerInfo = Get-CimInstance Win32_ComputerSystem -ComputerName $Computer
+            $OS = Get-CimInstance Win32_OperatingSystem -ComputerName $Computer #Hämtar information om operativsystemet
+            $ComputerInfo = Get-CimInstance Win32_ComputerSystem -ComputerName $Computer #Hämtar information om datorn och inloggad användare
 
+            #Sparar informationen i resultatlistan
             $Results += [PSCustomObject]@{
                 Computer = $Computer
                 IP       = $IP
