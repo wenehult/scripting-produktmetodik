@@ -47,6 +47,7 @@ function ShutdownComputerSafe
 #Skapar mall för loggfilen och vilken infromation som ska finnas.
 Write-Log "========== START =========="
 
+#Hämtar information från AD
 Import-Module ActiveDirectory -ErrorAction Stop
 
 $ADComputers = Get-ADComputer -Filter * |
