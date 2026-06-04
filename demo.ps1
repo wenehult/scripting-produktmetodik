@@ -55,9 +55,11 @@ $ADComputers = Get-ADComputer -Filter * |
     Select-Object -ExpandProperty Name |
     Where-Object { $_ -ne $LocalComputer } |
     Sort-Object
-
+#Skapar en tempoär lista för datornamn och ip
 $TempList = @()
-
+#Går igenom varje dator som hämtats från AD.
+#Försöker hitta IP genom DNS
+#Spara ip och datornamn men hittar den inte ip spara den endast datornamn
 foreach ($PC in $ADComputers)
 {
     try
@@ -78,7 +80,7 @@ $TempList | Set-Content $ComputerList
 $Computers = Get-Content $ComputerList
 
 $Results = @()
-
+#Inventrear varje 
 foreach ($Line in $Computers)
 {
     $Parts = $Line -split ","
