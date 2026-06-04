@@ -17,6 +17,7 @@ if (!(Test-Path $LogFolder))
     New-Item -ItemType Directory -Path $LogFolder | Out-Null
 }
 
+#Fyller på loggfilen med information som datum och text.
 function Write-Log
 {
     param([string]$Message)
