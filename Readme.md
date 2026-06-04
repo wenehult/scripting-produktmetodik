@@ -1,7 +1,7 @@
 # Uppgift 
 
 ## Kortfattat om uppgiften
-Detta har varit en uppgift där vi ska jobba i grupp och ta fram en produkt för att inventera och spara energi på vårt nätverk. Vill man ha mer information om projektet kan man läs mer om det i ProjectVision.md. Huvud målet var att lära sig jobba efter scrum modellen vilket var väldigt nytt för flera av oss. Vi fick börja med att planera och lära oss om arbetsättet 
+Detta har varit en uppgift där vi ska jobba i grupp och ta fram en produkt för att inventera och spara energi på vårt nätverk. Vill man ha mer information om projektet kan man läsa mer om det i ProjectVision.md. Huvud målet var att lära sig jobba efter scrum modellen vilket var väldigt nytt för flera av oss. Vi fick börja med att planera och lära oss om arbetsättet 
 
 ## Hur kör man scriptet
 
