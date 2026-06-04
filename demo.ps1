@@ -108,7 +108,7 @@ foreach ($Line in $Computers)
             $OS = Get-CimInstance Win32_OperatingSystem -ComputerName $Computer #Hämtar information om operativsystemet
             $ComputerInfo = Get-CimInstance Win32_ComputerSystem -ComputerName $Computer #Hämtar information om datorn och inloggad användare
 
-            #Sparar informationen i resultatlistan
+            #Sparar informationen i inveteringsrapporten
             $Results += [PSCustomObject]@{
                 Computer = $Computer
                 IP       = $IP
