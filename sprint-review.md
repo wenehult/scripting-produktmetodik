@@ -21,4 +21,19 @@ Sprint 2 var lyckad och vi fick någa punkter avklarade på backloggen. vi komme
 
 # Sprint review 3/6-26
 ## sprint 3
+En frånvarande från dagens gruppmöte.
+Kodintegration: Det visade sig vara svårt att slå ihop allas enskilda script. Att få de olika delarna att fungera tillsammans och prata med varandra krävde mycket mer felsökning än planerat.
+
+Miljöproblem i VMware: Vi stötte på stora problem med att få den färdiga koden att rulla i den virtuella miljön i VMware. Kod som fungerade på våra lokala maskiner betedde sig annorlunda eller kraschade i den virtuella miljön.
+
+Även om vi mötte motgångar har sprinten gett oss en väldigt viktig insikt inför framtida arbete:
+
+Vår viktigaste lärdom: Vi har insett hur kritiskt det är att testa koden i olika miljöer så tidigt som möjligt. Att kod fungerar i en utvecklingsmiljö betyder inte att den fungerar i en virtuell produktionsmiljö (som VMware). 
+
+# Sprint review 4/6-26
+## sprint 4
+En frånvarande från dagens morgonmöte men full grupp under redovisning av uppgiften.
+Målet för Sprint 4 var att lösa de integrations- och miljöproblem som vi identifierade i den förra sprinten. För att effektivisera arbetet samlades hela gruppen i ett grupprum för att köra en intensiv felsöknings- och kodningssession tillsammans.Genom att sitta tillsammans kunde vi snabbt identifiera och åtgärda de buggar som tidigare hindrade koden från att fungera ihop.
+Vi har uppdaterat och ändrat i scriptkoden. Skriptet har nu utökad funktionalitet och sparar framgångsrikt enheternas IP-adresser direkt i en loggfil.
+Vi har lyckats få skriptet att fungera på enheterna genom att göra nödvändiga datorkonfigurationer i vår miljö.
 
