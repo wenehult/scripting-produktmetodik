@@ -79,21 +79,22 @@ $TempList | Set-Content $ComputerList
 
 $Computers = Get-Content $ComputerList
 
+#Inventerar datorerna i nätverket
 $Results = @()
-#Inventrear varje 
+#Går igenom varje dator i inventeringslistan
 foreach ($Line in $Computers)
 {
-    $Parts = $Line -split ","
+    $Parts = $Line -split ","  #Delar upp raden i datornamn och IP-adress
 
-    $Computer = $Parts[0]
+    $Computer = $Parts[0] #Hämtar datornamnet
 
-    if ($Parts.Count -gt 1)
+    if ($Parts.Count -gt 1) #Hämtar IP-adressen om den finns
     {
         $IP = $Parts[1]
     }
     else
     {
-        $IP = ""
+        $IP = ""  #Lämnar IP-adressen tom om den saknas
     }
 
     Write-Host "Kontrollerar $Computer..." -ForegroundColor Yellow
