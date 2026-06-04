@@ -9,7 +9,7 @@ $LogFile = "$LogFolder\GreenIT.log"
 #Hämtar datorns namn för att förhindra att localhost datorn stängs ner.
 $LocalComputer = $env:COMPUTERNAME
 
-#Skapar 
+#Skapar loggmappen om den inte redan finns.
 if (!(Test-Path $LogFolder))
 {
     New-Item -ItemType Directory -Path $LogFolder | Out-Null
