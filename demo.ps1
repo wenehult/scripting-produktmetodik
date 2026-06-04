@@ -118,27 +118,31 @@ foreach ($Line in $Computers)
                 LastBoot = $OS.LastBootUpTime
             }
 
+            # Skriver till loggen att datorn är online
             Write-Log "$Computer är online"
 
+             # Om LIVE-läge används stängs datorn av
             if ($LIVE)
             {
-                if ($Computer -eq $LocalComputer)
+                if ($Computer -eq $LocalComputer) # Säkerhetskontroll så att den lokala datorn inte stängs av
                 {
                     Write-Host "SKIP: $Computer (this machine)" -ForegroundColor Yellow
                     continue
                 }
 
-                Write-Host "LIVE: stänger av $Computer..." -ForegroundColor Red
-                ShutdownComputerSafe -ComputerName $Computer
+                Write-Host "LIVE: stänger av $Computer..." -ForegroundColor Red #Visar att datorn stängs av
+                ShutdownComputerSafe -ComputerName $Computer   #Anropar funktionen som stänger av datorn
             }
             else
             {
+                #Testläge - visar bara vad som skulle ha hänt
                 Write-Host "TEST: $Computer skulle stängas av" -ForegroundColor Cyan
                 Write-Log "$Computer skulle stängas av (TEST-läge)"
             }
         }
         catch
         {
+             # Loggar eventuella fel vid hämtning av datorinformation
             Write-Log "$Computer CIM-fel: $($_.Exception.Message)"
         }
     }
