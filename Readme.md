@@ -15,4 +15,6 @@ Scriptet har i uppgift att inventera klienter på nätverket samt att det ska ku
 ## Reflektioner 
 
 Det har varit en lärorik uppgift som har givit många nya insikter i att jobba agilt. Vi lärde oss tidigt att det var lätt att göra backlogggens uppgifter för stora vilket ledde till att det var svårt att uppnå uppgifterna under sprinten. Detta gjorde vi om till senare sprints och delade upp uppgifterna i mindre byggklossar. Vi upplevde dock att vi hade en bra grupp där samtilga ville delta och uppnå våra mål men där vi ibland kanske hade behövt en tydligare arbetsstuktur. Detta för att på ett bättre och snabbare sätt uppnå vår mål. 
-En annan reflektion vi gjorde var att det var ont om tid att sätta sig in i arbetssättet och man hade behövt ytterligare några dagar så att man verkligen förstått varje sprint och kunnat jobba mer med varje del. 
+En annan reflektion vi gjorde var att det var ont om tid att sätta sig in i arbetssättet och man hade behövt ytterligare några dagar så att man verkligen förstått varje sprint och kunnat jobba mer med varje del. Nu fanns det inte mycket tid till att gör fel.
+
+Vi måste bli bättre på att jobba med project verktyget och ta på oss de uppgifter vi jobbar med. Både för att det ska synas att vi kommer framåt men dels för att underlätta för varandra så att man vet vad sina kollegor gör. Samt måste vi bättre att pusha koden till github så att vi kan se tydligt hur lång folk har kommit poch att man ska kunna testa koden ordentligt. Utöver det har vi haft ett bra abretsklimat men vi hade kunnat jobba bättre ihop
