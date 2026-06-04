@@ -1,3 +1,5 @@
+#Om skriptet startas med -LIVE kommer online-datorer
+#att stängas av. Utan -LIVE körs endast ett testläge.
 param(
     [switch]$LIVE
 )
