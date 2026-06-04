@@ -44,6 +44,7 @@ function ShutdownComputerSafe
     }
 }
 
+#Skapar mall för loggfilen och vilken infromation som ska finnas.
 Write-Log "========== START =========="
 
 Import-Module ActiveDirectory -ErrorAction Stop
