@@ -148,6 +148,7 @@ foreach ($Line in $Computers)
     }
     else
     {
+         # Sparar information om datorn om den är offline
         $Results += [PSCustomObject]@{
             Computer = $Computer
             IP       = $IP
@@ -157,14 +158,17 @@ foreach ($Line in $Computers)
             LastBoot = ""
         }
 
-        Write-Host "$Computer är offline" -ForegroundColor DarkGray
-        Write-Log "$Computer är offline"
+        Write-Host "$Computer är offline" -ForegroundColor DarkGray # Visar att datorn är offline
+        Write-Log "$Computer är offline" # Skriver till loggen att datorn är offline
     }
 }
 
+# Exporterar inventeringsrapporten till en CSV-fil
 $Results | Export-Csv ".\InventoryReport.csv" -NoTypeInformation -Encoding UTF8
 
+# Visar att skriptet är klart
 Write-Host "Klar!" -ForegroundColor Green
 $Results | Format-Table -AutoSize
 
+# Skriver slutmarkering i loggfilen
 Write-Log "========== SLUT =========="
