@@ -50,6 +50,7 @@ Write-Log "========== START =========="
 #Hämtar information från AD
 Import-Module ActiveDirectory -ErrorAction Stop
 
+#Hämtar alla datorobjekt och tar bort den lokala datorn samt soterar listan i alfabetiskt ordning. 
 $ADComputers = Get-ADComputer -Filter * |
     Select-Object -ExpandProperty Name |
     Where-Object { $_ -ne $LocalComputer } |
